@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
 
+import { Http } from '@angular/http';
+
+const URL_DRINKS = 'app/drinks.json'
+
 @Injectable()
 export class DrinkService {
   
-  constructor() {}
+  constructor(private _http: Http) {}
 
   getDrinks(){
-    return[
-      {id: 1, name: 'Tonic Water'},
-      {id: 2, name: 'Soda Water'},
-      {id: 3, name: 'Ginger Ale'}
-    ];
-
+    this._http.get(URL_DRINKS);
   }
 }

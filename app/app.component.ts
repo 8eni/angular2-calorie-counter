@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+import { HTTP_PROVIDERS } from '@angular/http';
 import { DrinksComponent } from './drink/drinks.component';
 
 @Component({
