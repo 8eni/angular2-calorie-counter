@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 
+import { DrinkComponent } from './drink/drink.component';
+
 @Component({
     selector: 'my-app',
-    templateUrl: `app/app.component.html`
+    templateUrl: `app/app.component.html`,
+    directives: [ DrinkComponent ]
 })
 export class AppComponent { 
   // [ ] Means property binding - C to D

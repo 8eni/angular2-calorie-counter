@@ -8,7 +8,7 @@
 <br>
 
 <ul [style.list-style-type]="listType">
-  <li *ngFor="let drink of drinks">
-    {{drink.name}}
+  <li *ngFor="let d of drinks">
+    <app-drink [drink]="d"></app-drink>
   </li>
 </ul>
