@@ -1,0 +1,6 @@
+<h1>{{title}}</h1>
+<div [style.color]="appColor">
+  <span>Hello {{developer}}</span><br>
+  <input type="text" [(ngModel)]="developer">
+  <button (click)="changeSuitColor()">Change app color</button>
+</div>

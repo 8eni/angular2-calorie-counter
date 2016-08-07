@@ -2,6 +2,20 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    template: '<h1>My First Angular 2 App</h1>'
+    templateUrl: `app/app.component.html`
 })
-export class AppComponent { }
+export class AppComponent { 
+  // [ ] Means property binding - C to D
+  // { } Means property binding - D to C
+
+  title = 'Calorie App';
+  developer = 'Benni Russell';
+  appColor = 'blue';
+
+  changeSuitColor() {
+    this.appColor = this.appColor === 'blue' ? 'red' : 'blue';
+  }
+
+}
+
+
