@@ -3,8 +3,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { DrinkComponent } from './drink.component';
 
 @Component({
+  moduleId: module.id,
   selector: 'app-drinks',
-  templateUrl: 'app/drink/drinks.component.html',
+  templateUrl: 'drinks.component.html',
   directives: [ DrinkComponent ]
 })
 export class DrinksComponent implements OnInit {

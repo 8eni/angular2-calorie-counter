@@ -3,8 +3,9 @@ import { Component } from '@angular/core';
 import { DrinksComponent } from './drink/drinks.component';
 
 @Component({
+    moduleId: module.id,
     selector: 'my-app',
-    templateUrl: 'app/app.component.html',
+    templateUrl: 'app.component.html',
     directives: [ DrinksComponent ]
 })
 export class AppComponent { 
