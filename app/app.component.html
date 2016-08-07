@@ -4,3 +4,11 @@
   <input type="text" [(ngModel)]="developer">
   <button (click)="changeSuitColor()">Change app color</button>
 </div>
+
+<br>
+
+<ul [style.list-style-type]="listType">
+  <li *ngFor="let drink of drinks">
+    {{drink.name}}
+  </li>
+</ul>
