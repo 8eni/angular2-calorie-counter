@@ -1,24 +1,21 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { DrinkComponent } from './drink.component';
+import { DrinkService } from './drink.service';
 
 @Component({
   moduleId: module.id,
   selector: 'app-drinks',
   templateUrl: 'drinks.component.html',
-  directives: [ DrinkComponent ]
+  directives: [ DrinkComponent ],
+  providers: [ DrinkService ],
 })
 export class DrinksComponent implements OnInit {
-  drinks = [
-    {id: 1, name: 'tonic water'},
-    {id: 2, name: 'Soda water'},
-    {id: 3, name: 'Ginger Ale'}
-  ];
-
-  constructor() {}
+  drinks: any[];
+  constructor(private _drinkService: DrinkService) {}
 
   ngOnInit() {
-    
+     this.drinks = this._drinkService.getDrinks();
   }
 }
 
